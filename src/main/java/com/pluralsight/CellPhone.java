@@ -15,7 +15,7 @@ public class CellPhone {
         this.owner = owner;
     }
 
-
+    // GET/SET
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -42,5 +42,11 @@ public class CellPhone {
     }
     public void setModel(String model) {
         this.model = model;
+    }
+
+
+    // dial
+    public void dial(CellPhone phoneBeingCalled) {
+        System.out.printf("%s's phone is calling %s", this.getOwner(), phoneBeingCalled.getPhoneNumber());
     }
 }

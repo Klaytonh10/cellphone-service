@@ -10,13 +10,13 @@ public class CellPhoneService {
         System.out.print("What is the serial number? ");
         cellPhone1.setSerialNumber(scanner.nextInt());
         System.out.print("What model is your phone? ");
-        cellPhone1.setModel(scanner.next());
+        cellPhone1.setModel(scanner.nextLine());
         System.out.println("Who is your carrier? ");
-        cellPhone1.setCarrier(scanner.next());
+        cellPhone1.setCarrier(scanner.nextLine());
         System.out.println("What is your phone number? ");
-        cellPhone1.setPhoneNumber(scanner.next());
+        cellPhone1.setPhoneNumber(scanner.nextLine());
         System.out.println("Who is the owner of the phone? ");
-        cellPhone1.setOwner(scanner.next());
+        cellPhone1.setOwner(scanner.nextLine());
 
         System.out.println(cellPhone1.getSerialNumber() + "\n" + cellPhone1.getModel() + "\n" + cellPhone1.getCarrier() + "\n" + cellPhone1.getPhoneNumber() + "\n" + cellPhone1.getOwner());
     }

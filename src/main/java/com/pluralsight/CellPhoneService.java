@@ -18,7 +18,6 @@ public class CellPhoneService {
         System.out.println("Who is the owner of the phone? ");
         cellPhone1.setOwner(scanner.next());
 
-        System.out.println("Hello");
         System.out.println(cellPhone1.getSerialNumber() + "\n" + cellPhone1.getModel() + "\n" + cellPhone1.getCarrier() + "\n" + cellPhone1.getPhoneNumber() + "\n" + cellPhone1.getOwner());
     }
 }

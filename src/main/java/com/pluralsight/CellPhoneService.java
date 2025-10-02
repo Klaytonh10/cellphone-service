@@ -6,18 +6,29 @@ public class CellPhoneService {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        CellPhone cellPhone1 = new CellPhone();
         System.out.print("What is the serial number? ");
-        cellPhone1.setSerialNumber(scanner.nextInt());
+        int serialNumber = Integer.parseInt(scanner.nextLine());
         System.out.print("What model is your phone? ");
-        cellPhone1.setModel(scanner.nextLine());
-        System.out.println("Who is your carrier? ");
-        cellPhone1.setCarrier(scanner.nextLine());
-        System.out.println("What is your phone number? ");
-        cellPhone1.setPhoneNumber(scanner.nextLine());
-        System.out.println("Who is the owner of the phone? ");
-        cellPhone1.setOwner(scanner.nextLine());
+        String model = scanner.nextLine();
+        System.out.print("Who is your carrier? ");
+        String carrier = scanner.nextLine();
+        System.out.print("What is your phone number? ");
+        String phoneNumber = scanner.nextLine();
+        System.out.print("Who is the owner of the phone? ");
+        String owner = scanner.nextLine();
 
-        System.out.println(cellPhone1.getSerialNumber() + "\n" + cellPhone1.getModel() + "\n" + cellPhone1.getCarrier() + "\n" + cellPhone1.getPhoneNumber() + "\n" + cellPhone1.getOwner());
+        CellPhone cellPhone1 = new CellPhone(serialNumber, model, carrier, phoneNumber, owner);
+        CellPhone cellPhone2 = new CellPhone(5319205, "iPhone 15 Plus", "t-mobile", "1234567890", "John Doe");
+        cellPhone1.dial(cellPhone2);
+        cellPhone2.dial(cellPhone1);
+        phoneInfo(cellPhone1);
+        phoneInfo(cellPhone2);
+    }
+    public static void phoneInfo(CellPhone phone) {
+        System.out.println("Owner: " + phone.getOwner());
+        System.out.println("Serial Number: " + phone.getSerialNumber());
+        System.out.println("Model: " + phone.getModel());
+        System.out.println("Carrier: " + phone.getCarrier());
+        System.out.println("Phone Number: " + phone.getPhoneNumber() + "\n\n");
     }
 }

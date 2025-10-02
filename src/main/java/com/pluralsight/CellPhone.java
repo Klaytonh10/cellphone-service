@@ -52,9 +52,13 @@ public class CellPhone {
         this.model = model;
     }
 
-
     // dial
+    public void dial(String phoneNumber) {
+        System.out.printf("\n%s's phone is calling %s\n", getOwner(), phoneNumber);
+    }
+
+    // overloaded dial
     public void dial(CellPhone phone) {
-        System.out.printf("%s's phone is calling %s" + "\n\n", getOwner(), phone.getPhoneNumber());
+        System.out.printf("\n%s's phone is calling %s\n", getOwner(), phone.getPhoneNumber());
     }
 }
